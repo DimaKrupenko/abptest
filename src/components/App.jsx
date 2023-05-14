@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 const Home = lazy(() => import('../pages/Home/Home'));
@@ -9,12 +9,12 @@ const ExtendedDescriptions = lazy(() => import('../pages/ExtendedDescriptions/Ex
 const App = () => {
   return (
     <div className="App">
-      <header>
+      {/* <header>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/Variables">DecodeVin</Link>
         </nav>
-      </header>
+      </header> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route index element={<Home />} />
