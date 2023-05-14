@@ -1,6 +1,6 @@
 import { API } from '../services/api'
 import { useState, useEffect } from "react";
-import { useSearchParams, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const [search, setSearch] = useState('')
@@ -30,7 +30,7 @@ const Home = () => {
         if (vinLists.length > 0) {
             navigateToVariablesPage();
         }
-    }, [vinLists]);
+    },);
 
     const navigateToVariablesPage = () => {
         navigate("variables", { state: { vinLists: vinLists } });
