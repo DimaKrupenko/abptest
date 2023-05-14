@@ -1,5 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import styles from './decodevin.module.css'
+
+
 
 
 const DecodeVin = () => {
@@ -11,13 +14,12 @@ const DecodeVin = () => {
     useEffect(() => {
         setRender(vinLists)
     }, [vinLists])
-
     return (
         <div>
-            <h1>LIST</h1>
+            <h1>VIN data</h1>
             <ul>
                 {render && render.map(list => (
-                    <li key={list.VariableId}>
+                    <li key={list.VariableId} className={styles.decode__list}>
                         {list.Variable}: {list.Value ? list.Value : 'no information'}
                     </li>
                 ))}
