@@ -1,22 +1,26 @@
 {
   "files": {
     "main.css": "/abptest/static/css/main.7b0a663a.css",
-    "main.js": "/abptest/static/js/main.e9d52271.js",
-    "static/js/516.078fdbc6.chunk.js": "/abptest/static/js/516.078fdbc6.chunk.js",
-    "static/js/553.3f05608b.chunk.js": "/abptest/static/js/553.3f05608b.chunk.js",
-    "static/js/382.731c85a9.chunk.js": "/abptest/static/js/382.731c85a9.chunk.js",
+    "main.js": "/abptest/static/js/main.e0577f4a.js",
+    "static/css/80.ac368425.chunk.css": "/abptest/static/css/80.ac368425.chunk.css",
+    "static/js/80.c60726b2.chunk.js": "/abptest/static/js/80.c60726b2.chunk.js",
+    "static/css/365.75c09f1d.chunk.css": "/abptest/static/css/365.75c09f1d.chunk.css",
+    "static/js/365.19284a07.chunk.js": "/abptest/static/js/365.19284a07.chunk.js",
+    "static/js/840.d922dc38.chunk.js": "/abptest/static/js/840.d922dc38.chunk.js",
     "static/js/787.548f2d51.chunk.js": "/abptest/static/js/787.548f2d51.chunk.js",
-    "static/js/384.017bce30.chunk.js": "/abptest/static/js/384.017bce30.chunk.js",
+    "static/js/307.d8fd2342.chunk.js": "/abptest/static/js/307.d8fd2342.chunk.js",
     "index.html": "/abptest/index.html",
     "main.7b0a663a.css.map": "/abptest/static/css/main.7b0a663a.css.map",
-    "main.e9d52271.js.map": "/abptest/static/js/main.e9d52271.js.map",
-    "516.078fdbc6.chunk.js.map": "/abptest/static/js/516.078fdbc6.chunk.js.map",
-    "553.3f05608b.chunk.js.map": "/abptest/static/js/553.3f05608b.chunk.js.map",
+    "main.e0577f4a.js.map": "/abptest/static/js/main.e0577f4a.js.map",
+    "80.ac368425.chunk.css.map": "/abptest/static/css/80.ac368425.chunk.css.map",
+    "80.c60726b2.chunk.js.map": "/abptest/static/js/80.c60726b2.chunk.js.map",
+    "365.75c09f1d.chunk.css.map": "/abptest/static/css/365.75c09f1d.chunk.css.map",
+    "365.19284a07.chunk.js.map": "/abptest/static/js/365.19284a07.chunk.js.map",
     "787.548f2d51.chunk.js.map": "/abptest/static/js/787.548f2d51.chunk.js.map",
-    "384.017bce30.chunk.js.map": "/abptest/static/js/384.017bce30.chunk.js.map"
+    "307.d8fd2342.chunk.js.map": "/abptest/static/js/307.d8fd2342.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b0a663a.css",
-    "static/js/main.e9d52271.js"
+    "static/js/main.e0577f4a.js"
   ]
 }
