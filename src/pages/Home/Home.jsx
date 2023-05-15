@@ -7,10 +7,16 @@ import Notiflix from 'notiflix';
 const Home = () => {
     const [search, setSearch] = useState('');
     const [vinLists, setVinLists] = useState('');
+    // const [searchParams, setSearchParams] = useSearchParams();
+
     const navigate = useNavigate();
+
+    // const location = useLocation()
+
 
     const onChange = (evt) => {
         setSearch(evt.target.value);
+        // setSearchParams({ filter: evt.target.value })
     };
 
     const searchVin = async () => {

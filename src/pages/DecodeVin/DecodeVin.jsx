@@ -7,10 +7,14 @@ import styles from './decodevin.module.css'
 
 const DecodeVin = () => {
     const [render, setRender] = useState('')
+    // const [searchParams, setSearchParams] = useSearchParams();
 
 
     const location = useLocation();
     const vinLists = location.state?.vinLists;
+    // const storedResult = localStorage.getItem('recentResult');
+    // return storedResult ? JSON.parse(storedResult) : [];
+    // setSearchParams({ filter: JSON.parse(storedResult) })
 
     useEffect(() => {
         setRender(vinLists)
