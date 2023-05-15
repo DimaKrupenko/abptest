@@ -11,12 +11,6 @@ const ExtendedDescriptions = lazy(() => import('../pages/ExtendedDescriptions/Ex
 const App = () => {
   return (
     <div className="App">
-      {/* <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/Variables">DecodeVin</Link>
-        </nav>
-      </header> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route index element={<Home />} />

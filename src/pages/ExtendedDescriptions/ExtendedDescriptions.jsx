@@ -7,16 +7,13 @@ import styles from './extendedDescriptions.module.css'
 
 
 const ExtendedDescriptions = () => {
-    // const [variableId, setVariableId] = useState('');
     const [description, setDescription] = useState([]);
-    // const location = useLocation()
 
     const { variableId } = useParams();
 
     useEffect(() => {
         const getDescription = async () => {
             try {
-                // setVariableId(Id);
                 const data = await API.getVehicleVeriablesList();
                 setDescription(data);
             } catch (error) {
@@ -26,15 +23,11 @@ const ExtendedDescriptions = () => {
         getDescription();
     }, [variableId]);
 
-    // const descId = description.map(desc => desc.ID);
     const filteredDescriptions = description.filter(disc => disc.ID == variableId);
 
-    // console.log(location.state?.from.state.vinLists
-    // )
 
     return (
         <div>
-            {/* <Link to={location.state?.from ?? '/'}>Go back</Link> */}
             <ul className={styles.disc}>
                 {filteredDescriptions.map(disc => (
                     <li key={disc.ID} className={styles.disc__list}>

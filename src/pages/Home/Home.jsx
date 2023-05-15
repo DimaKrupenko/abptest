@@ -76,20 +76,8 @@ const Home = () => {
         localStorage.setItem('recentResult', JSON.stringify(updatedResult));
     };
 
-
-    // const saveRecentSearches = (search, vin) => {
-    //     const recentSearches = retrieveRecentSearches();
-    //     const updatedSearches = [search, ...recentSearches.slice(0, 4)];
-    //     const combinedResults = [...vin, ...updatedSearches];
-    //     console.log(updatedSearches)
-    //     console.log(combinedResults)
-
-    //     localStorage.setItem('recentSearches', JSON.stringify(updatedSearches));
-    // };
-
     const recentSearches = retrieveRecentSearches();
     const recentResult = retrieveResultSearches()
-    console.log(recentResult)
     return (
         <div>
             <input type="text" onChange={onChange} className={styles.input} />
@@ -118,7 +106,7 @@ const Home = () => {
                         <li key={innerIndex}>
                             {item.Value !== null
                                 && <div>
-                                    {index + 1} -
+                                    {index + 1}:
                                     <p>Value: {item.Value}</p>
                                     <p>Variable: {item.Variable}</p>
                                 </div>
