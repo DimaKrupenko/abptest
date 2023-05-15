@@ -20,11 +20,11 @@ export const API = {
     return response.data.Results;
   },
 
-  //   async searchMovie() {
-  //     const urlSearch = `${this.BASE_URL}${this.URL_SEARCH}?query=${this.query}&api_key=${this.API_KEY}`;
-  //     const response = await axios.get(urlSearch);
-  //     return response.data.results;
-  //   },
+  async getVehicleVeriablesList() {
+    const url = `${this.BASE_URL}vehicles/getvehiclevariablelist?format=json`;
+    const response = await axios.get(url);
+    return response.data.Results;
+  },
 
   //   async getDetails() {
   //     const urlDetails = `${this.BASE_URL}movie/${this.movieId}?api_key=${this.API_KEY}`;

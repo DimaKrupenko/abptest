@@ -6,6 +6,8 @@ const Home = lazy(() => import('../pages/Home/Home'));
 const DecodeVin = lazy(() => import('../pages/DecodeVin/DecodeVin'));
 const ExtendedDescriptions = lazy(() => import('../pages/ExtendedDescriptions/ExtendedDescriptions'));
 
+
+
 const App = () => {
   return (
     <div className="App">
@@ -19,12 +21,8 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
-          <Route path="variables" element={<DecodeVin />}>
-            <Route
-              path="variables/:variableId"
-              element={<ExtendedDescriptions />}
-            />
-          </Route>
+          <Route path="variables" element={<DecodeVin />} />
+          <Route path="variables/:variableId" element={<ExtendedDescriptions />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Suspense>
