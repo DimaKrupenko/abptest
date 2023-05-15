@@ -107,8 +107,8 @@ const Home = () => {
                             {item.Value !== null
                                 && <div>
                                     {index + 1}:
-                                    <p>Value: {item.Value}</p>
                                     <p>Variable: {item.Variable}</p>
+                                    <p>Value: {item.Value}</p>
                                 </div>
                             }
                         </li>
