@@ -101,19 +101,21 @@ const Home = () => {
             )}
             <h2 className={styles.title__home}>Description of recent search results</h2>
             {recentResult.map((nestedArray, index) => (
-                <ul key={index} className={styles.resultSearches}>
-                    {nestedArray.map((item, innerIndex) => (
-                        <li key={innerIndex}>
-                            {item.Value !== null
-                                && <div>
-                                    {index + 1}:
-                                    <p>Variable: {item.Variable}</p>
-                                    <p>Value: {item.Value}</p>
-                                </div>
-                            }
-                        </li>
-                    ))}
-                </ul>
+                <div key={index} className={styles.conteiner__resultSearches}>
+                    <ul className={styles.resultSearches}>
+                        {nestedArray.map((item, innerIndex) => (
+                            <li key={innerIndex}>
+                                {item.Value !== null
+                                    && <div>
+                                        {index + 1}:
+                                        <p>Variable: {item.Variable}</p>
+                                        <p>Value: {item.Value}</p>
+                                    </div>
+                                }
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             ))}
 
         </div>

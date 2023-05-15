@@ -17,9 +17,13 @@
 }
 
 .resultSearches {
-  display: inline-block;
   border: 1px solid grey;
   width: 250px;
   padding-left: 1px;
   margin-left: 20px;
+}
+
+.conteiner__resultSearches {
+  display: inline-block;
+  vertical-align: top;
 }
