@@ -1,27 +1,21 @@
 import { API } from '../../services/api';
 import { useState, useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from './home.module.css';
 import Notiflix from 'notiflix';
 
 const Home = () => {
     const [search, setSearch] = useState('');
     const [vinLists, setVinLists] = useState('');
-    const [searchParams] = useSearchParams();
 
     const navigate = useNavigate();
 
-    // const location = useLocation()
 
 
     const onChange = (evt) => {
         setSearch(evt.target.value);
-        // setSearchParams({ filter: evt.target.value })
-        navigate(`?filter=${encodeURIComponent(evt.target.value)}`);
     };
 
-    const filterValue = searchParams.get("filter") || "";
-    console.log(filterValue)
     const searchVin = async () => {
         try {
             API.resetQuery();
@@ -59,7 +53,6 @@ const Home = () => {
     const handleSearch = () => {
         if (isInputValid()) {
             searchVin();
-            navigate(`?filter=${encodeURIComponent(search)}`);
         } else {
             Notiflix.Notify.failure('Invalid number or prohibited characters');
         }
