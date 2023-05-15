@@ -7,7 +7,7 @@ import Notiflix from 'notiflix';
 const Home = () => {
     const [search, setSearch] = useState('');
     const [vinLists, setVinLists] = useState('');
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
 
     const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const Home = () => {
     };
 
     const filterValue = searchParams.get("filter") || "";
-
+    console.log(filterValue)
     const searchVin = async () => {
         try {
             API.resetQuery();
