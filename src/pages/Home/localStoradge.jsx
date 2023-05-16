@@ -19,6 +19,3 @@ export const saveResultSearches = (vin) => {
     const updatedResult = [vin, ...recentResult.slice(0, 4)];
     localStorage.setItem('recentResult', JSON.stringify(updatedResult));
 };
-
-
-

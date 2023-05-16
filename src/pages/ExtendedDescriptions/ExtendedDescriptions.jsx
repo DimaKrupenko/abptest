@@ -23,21 +23,19 @@ const ExtendedDescriptions = () => {
         getDescription();
     }, [variableId]);
 
-    const filteredDescriptions = description.filter(disc => disc.ID == variableId);
+    const filteredDescriptions = description.filter(({ ID }) => ID == variableId);
 
 
     return (
         <div>
             <ul className={styles.disc}>
-                {filteredDescriptions.map(disc => (
-                    <li key={disc.ID} className={styles.disc__list}>
-                        <p className={styles.disc__text}>Name: {disc.Name ? disc.Name : 'no information'}</p>
-                        <p className={styles.disc__text}>Group Name: {disc.GroupName ? disc.GroupName : 'no information'}</p>
-                        <p className={styles.disc__text}>Description: {disc.Description ? disc.Description : 'no information'}</p>
+                {filteredDescriptions.map(({ ID, Name, GroupName, Description }) => (
+                    <li key={ID} className={styles.disc__list}>
+                        <p className={styles.disc__text}>Name: {Name ? Name : 'no information'}</p>
+                        <p className={styles.disc__text}>Group Name: {GroupName ? GroupName : 'no information'}</p>
+                        <p className={styles.disc__text}>Description: {Description ? Description : 'no information'}</p>
                     </li>
                 ))}
-
-
             </ul>
         </div>
     )

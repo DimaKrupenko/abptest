@@ -1,6 +1,7 @@
 .disc {
   display: flex;
-  margin-top: 50px;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 .disc__list {

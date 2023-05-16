@@ -13,6 +13,7 @@ const Home = () => {
 
     const onChange = (evt) => {
         setSearch(evt.target.value);
+
     };
 
     const searchVin = async () => {
@@ -35,7 +36,7 @@ const Home = () => {
     },);
 
     const navigateToVariablesPage = () => {
-        navigate("variables", { state: { vinLists, search } });
+        navigate("variables", { state: { vinLists } });
     };
 
     const isInputValid = () => {
@@ -62,7 +63,7 @@ const Home = () => {
 
     return (
         <div>
-            <input type="text" onChange={onChange} className={styles.input} />
+            <input type="text" onChange={onChange} className={styles.input} placeholder='Enter VIN' autoсomplete="on" />
             {search.length > 0 ? (
                 <button onClick={handleSearch}>Search</button>
             ) : (
