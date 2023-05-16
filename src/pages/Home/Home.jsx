@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from './home.module.css';
 import Notiflix from 'notiflix';
+import { retrieveRecentSearches, saveRecentSearches, retrieveResultSearches, saveResultSearches } from './localStoradge'
 
 const Home = () => {
     const [search, setSearch] = useState('');
@@ -58,27 +59,6 @@ const Home = () => {
         }
     };
 
-    const retrieveRecentSearches = () => {
-        const storedSearches = localStorage.getItem('recentSearches');
-        return storedSearches ? JSON.parse(storedSearches) : [];
-    };
-
-    const saveRecentSearches = (searches) => {
-        const recentSearches = retrieveRecentSearches();
-        const updatedSearches = [search, ...recentSearches.slice(0, 4)];
-        localStorage.setItem('recentSearches', JSON.stringify(updatedSearches));
-    };
-
-    const retrieveResultSearches = () => {
-        const storedResult = localStorage.getItem('recentResult');
-        return storedResult ? JSON.parse(storedResult) : [];
-    };
-    const saveResultSearches = (vin) => {
-        const recentResult = retrieveResultSearches();
-        const updatedResult = [vin, ...recentResult.slice(0, 4)];
-        localStorage.setItem('recentResult', JSON.stringify(updatedResult));
-    };
-
     const recentSearches = retrieveRecentSearches();
     const recentResult = retrieveResultSearches()
     return (
@@ -106,13 +86,13 @@ const Home = () => {
             {recentResult.map((nestedArray, index) => (
                 <div key={index} className={styles.conteiner__resultSearches}>
                     <ul className={styles.resultSearches}>
-                        {nestedArray.map((item, innerIndex) => (
+                        {nestedArray.map(({ Variable, Value }, innerIndex) => (
                             <li key={innerIndex}>
-                                {item.Value !== null
+                                {Value !== null
                                     && <div>
                                         {index + 1}:
-                                        <p>Variable: {item.Variable}</p>
-                                        <p>Value: {item.Value}</p>
+                                        <p>Variable: {Variable}</p>
+                                        <p>Value: {Value}</p>
                                     </div>
                                 }
                             </li>
