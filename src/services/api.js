@@ -25,22 +25,4 @@ export const API = {
     const response = await axios.get(url);
     return response.data.Results;
   },
-
-  //   async getDetails() {
-  //     const urlDetails = `${this.BASE_URL}movie/${this.movieId}?api_key=${this.API_KEY}`;
-  //     const response = await axios.get(urlDetails);
-  //     return response.data;
-  //   },
-
-  //   async getCast() {
-  //     const urlCast = `${this.BASE_URL}movie/${this.movieId}/credits?api_key=${this.API_KEY}`;
-  //     const response = await axios.get(urlCast);
-  //     return response.data.cast;
-  //   },
-
-  //   async getRevies() {
-  //     const urlReviews = `${this.BASE_URL}movie/${this.movieId}/reviews?api_key=${this.API_KEY}`;
-  //     const response = await axios.get(urlReviews);
-  //     return response.data.results;
-  //   },
 };

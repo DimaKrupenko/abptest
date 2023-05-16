@@ -8,13 +8,27 @@ import styles from './decodevin.module.css'
 const DecodeVin = () => {
     const [render, setRender] = useState('')
 
+    // const [searchParams, setSearchParams] = useSearchParams();
 
+
+    // console.log(searchParams)
     const location = useLocation();
     const vinLists = location.state?.vinLists;
+    const search = location.state?.search;
+
 
     useEffect(() => {
         setRender(vinLists)
+        // setSearchParams({ filter: search })
+
+        // console.log(search)
     }, [vinLists])
+
+    console.log(search)
+    // setSearchParams({ filter: search })
+
+
+
     return (
         <div>
             <h1>VIN data</h1>

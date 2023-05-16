@@ -11,8 +11,6 @@ const Home = () => {
 
     const navigate = useNavigate();
 
-
-
     const onChange = (evt) => {
         setSearch(evt.target.value);
     };
@@ -37,7 +35,7 @@ const Home = () => {
     },);
 
     const navigateToVariablesPage = () => {
-        navigate("variables", { state: { vinLists: vinLists } });
+        navigate("variables", { state: { vinLists, search } });
     };
 
     const isInputValid = () => {
@@ -61,6 +59,7 @@ const Home = () => {
 
     const recentSearches = retrieveRecentSearches();
     const recentResult = retrieveResultSearches()
+
     return (
         <div>
             <input type="text" onChange={onChange} className={styles.input} />
@@ -74,11 +73,9 @@ const Home = () => {
             {recentSearches.length > 0 && (
                 <ul className={styles.recentSearches}>
                     {recentSearches.map((item, index) => (
-
                         <li key={index}>
                             {index + 1} - {item}
                         </li>
-
                     ))}
                 </ul>
             )}
