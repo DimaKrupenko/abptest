@@ -63,7 +63,7 @@ const Home = () => {
 
     return (
         <div>
-            <input type="text" onChange={onChange} className={styles.input} placeholder='Enter VIN' autoсomplete="on" />
+            <input type="text" onChange={onChange} className={styles.input} placeholder='Enter VIN' />
             {search.length > 0 ? (
                 <button onClick={handleSearch}>Search</button>
             ) : (
